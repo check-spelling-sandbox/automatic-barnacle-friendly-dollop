@@ -15,8 +15,8 @@ jobs:
         uses: check-spelling/gh-program-downloader@v0.0.2
         with:
           repository: cli/cli
-          destination: ../bin/gh/b
-          file-re: bin/
+          destination: ../bin/gh
+          file-re: bin/b
           add-to-path: 1
           trace: 1
 
