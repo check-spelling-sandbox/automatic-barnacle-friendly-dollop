@@ -12,10 +12,10 @@ jobs:
 
     steps:
       - name: Install GitHub CLI
-        uses: check-spelling-sandbox/refactored-octo-train@16cd1fac19630ad6fbdb198f0ab4e3cc4c3b7603
+        uses: check-spelling/gh-program-downloader@v0.0.2
         with:
           repository: cli/cli
-          destination: ../bin/gh
+          destination: ../bin/gh/b
           file-re: bin/
           add-to-path: 1
           trace: 1
