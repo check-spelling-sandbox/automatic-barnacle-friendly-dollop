@@ -1,0 +1,26 @@
+name: program-downloader
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    container:
+      image: mcr.microsoft.com/playwright:v1.51.0-jammy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install GitHub CLI
+        uses: check-spelling/gh-program-downloader@v0.0.2
+        with:
+          repository: cli/cli
+          destination: ../bin/gh
+          file-re: bin/
+          add-to-path: 1
+
+      - name: Run a one-line script
+        run: |
+          (
+            command -v gh
+          )| tee -a "$GITHUB_STEP_SUMMARY"
