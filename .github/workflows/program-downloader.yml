@@ -23,5 +23,7 @@ jobs:
       - name: Run a one-line script
         run: |
           (
-            command -v gh
+            echo "gh: $(command -v gh)"
+            echo "../bin:"
+            find ../bin || true
           )| tee -a "$GITHUB_STEP_SUMMARY"
