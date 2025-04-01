@@ -18,6 +18,7 @@ jobs:
           destination: ../bin/gh
           file-re: bin/b
           add-to-path: 1
+          trace: 1
 
       - name: Run a one-line script
         run: |
