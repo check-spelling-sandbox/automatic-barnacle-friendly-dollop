@@ -16,7 +16,7 @@ jobs:
         with:
           repository: cli/cli
           destination: ../bin/gh
-          file-re: bin/
+          file-re: bin/b
           add-to-path: 1
           trace: 1
 
